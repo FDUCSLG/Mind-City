@@ -34,6 +34,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 
 # 复制Flarum插件和Nginx配置文件
 COPY ./composer.json /Mind-City/composer.json
+COPY ./composer.lock /Mind-City/composer.lock
 COPY ./docker/flarum.conf /etc/nginx/sites-available/flarum.conf
 
 # 安装Flarum插件和配置Nginx

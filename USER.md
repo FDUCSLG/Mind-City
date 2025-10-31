@@ -160,6 +160,7 @@ composer require fof/socialprofile # 社交资料外部链接
 
 composer require blazite/flarum-turnstile # reCAPTCHA验证
 composer require hamcq/filter-plus # 阿里云内容过滤
+
 composer require the-turk/flarum-mathren # Katex数学公式
 composer require v17development/flarum-seo # SEO搜索引擎优化
 composer require nearata/flarum-ext-signup-confirm-password # 注册二次确认密码
@@ -347,5 +348,15 @@ composer require xypp/pay-to-read # 付费阅读
 /* 签到后隐藏按钮 */
 .CheckInButton--green {
     display: none;
+}
+
+/* 标签标题 */
+.Hero h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.DiscussionListItem-main mark {
+    background: #ffff80 !important;
 }
 ```

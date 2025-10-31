@@ -45,7 +45,7 @@ sudo bash start.sh deploy-dev
 sudo bash start.sh deploy-latest
 
 # 方式三: 回滚到指定版本
-sudo bash start.sh deploy-back ethancao16770/mind-city:20251030-153138 flarum-db-20251030-153136.sql.gz
+sudo bash start.sh deploy-back ethancao16770/mind-city-prod:20251101-025308 flarum-db-20251101-025308.sql.gz
 
 # 配置cron (每周日凌晨2点执行备份和同步)
 sudo crontab -e

@@ -15,7 +15,7 @@ services:
             - flarum-network
 
     flarum:
-        image: ethancao16770/mind-city:latest
+        image: ethancao16770/mind-city-prod:20251101-025308
         container_name: flarum-prod
         restart: unless-stopped
         depends_on:
