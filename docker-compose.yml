@@ -1,0 +1,31 @@
+services:
+    mysql:
+        image: mysql:8.0
+        container_name: mysql-prod
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: flarum_password
+            MYSQL_DATABASE: flarum_db
+            MYSQL_USER: flarum_user
+            MYSQL_PASSWORD: flarum_password
+            TZ: Asia/Shanghai
+        volumes:
+            - /data/mysql:/var/lib/mysql
+        networks:
+            - flarum-network
+
+    flarum:
+        image: ethancao16770/mind-city:latest
+        container_name: flarum-prod
+        restart: unless-stopped
+        depends_on:
+            - mysql
+        ports:
+            - "80:80"
+            - "443:443"
+        networks:
+            - flarum-network
+
+networks:
+    flarum-network:
+        driver: bridge
